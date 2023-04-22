@@ -38,14 +38,13 @@ def get_user_input(skin_types):
     skin_types_lower = [skin_type.lower() for skin_type in skin_types]
 
     while True:
-
         print(skin_types)
         user_input = input("Choose skin type: ")
 
         if user_input.lower() in skin_types_lower:
             return user_input
-        print("try again")
 
+        print("try again")
 
 
 def get_skin_type_list(data):
@@ -95,6 +94,7 @@ def serialize_animal(animal):
     output += "</li>\n"
 
     return output
+
 
 def load_data(file_path):
     """ Loads a JSON file """
