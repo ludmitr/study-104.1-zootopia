@@ -43,10 +43,12 @@ def serialize_animal(animal):
     output += '<li class="cards__item">'
     output += f"<div class='card__title'>{animal['name']}</div>\n"
     output += "<p class='card__text'>\n"
-    output += f"<strong>Diet</strong>: {animal['characteristics']['diet']}</br>\n"
-    output += f"<strong>Location</strong>: {animal['locations'][0]} </br>\n"
+    output += "<ul class='animal__card__list'>\n"
+    output += f"<li><strong>Diet</strong>: {animal['characteristics']['diet']}</li>\n"
+    output += f"<li><strong>Location</strong>: {animal['locations'][0]}</li>\n"
     if "type" in animal['characteristics']:
-        output += f"<strong>Type</strong>: {animal['characteristics']['type']}</br>\n"
+        output += f"<li><strong>Type</strong>: {animal['characteristics']['type']}</li>\n"
+    output += "</ul>"
     output += "</p>\n"
     output += "</li>\n"
 
